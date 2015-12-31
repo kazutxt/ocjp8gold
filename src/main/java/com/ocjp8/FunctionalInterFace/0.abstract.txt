@@ -1,0 +1,17 @@
+関数型インタフェースとは、抽象メソッドが1つだけのインタフェース(SAM:Single Abstract Method)
+クラスに@FunctionalInterfaceを付けると、関数型インタフェースの条件を満たしていないとコンパイルエラーになる。
+
+MyFunctionalInterface.java
+Main1.java
+
+関数型インタフェースは、メソッドが1つしかないため、メソッド名を明示しなくても特定ができる。
+また、関数型インタフェースは、自作してもよいが、結局のところ中身はオーバライドされる。
+つまり、引数をジェネリクスとしてしまえば、引数の数と、戻り値に有無だけが意味を持つ。
+
+1.Supplier(get系) 引数なしで値を返す
+supplier#get                 () -> T
+BooleanSupplier#getAsBoolean () -> Boolean
+IntSupplier#getAsInt         () -> int
+LongSupplier#getAsLong       () -> long
+DoubleSupplier#getAsDouble   () -> double
+
